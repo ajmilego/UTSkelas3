@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">UTSKelas3</string>
+    <string name="text_setting">Setting</string>
+    <string name="text_logout">Logout</string>
+    <string name="text_search">Search</string>
+    <string name="text_list">List Olahraga</string>
 </resources>

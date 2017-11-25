@@ -3,6 +3,8 @@ package sttg.inf.utskelas3;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
@@ -43,5 +45,23 @@ public class List_Olahraga extends AppCompatActivity {
         });
 
 
+    }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if(item.getItemId()==R.id.action_logout){
+            Intent intbacklogin = new Intent(List_Olahraga.this, MainActivity.class);
+            startActivity(intbacklogin);
+        }
+        else if(item.getItemId()==R.id.action_list){
+            Intent intbacklogin = new Intent(List_Olahraga.this, KumpulanOlahraga.class);
+            startActivity(intbacklogin);
+        }
+        return super.onOptionsItemSelected(item);
     }
 }
